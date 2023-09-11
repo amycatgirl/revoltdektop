@@ -1,4 +1,4 @@
-name: 📦 Publish to Snapcraft
+name: 📦 Publish to Snapcraft (Beta Release)
 
 on:
   release:
