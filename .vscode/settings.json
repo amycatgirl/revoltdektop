@@ -1,0 +1,5 @@
+{
+    "yaml.schemas": {
+        "/snap/snapcraft/current/share/snapcraft/schema/snapcraft.json": "**/snapcraft.yaml",
+    }
+}
