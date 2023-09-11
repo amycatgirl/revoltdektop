@@ -56,7 +56,7 @@ plugs:
 apps:
   revolt:
     extensions: [gnome]
-    command: /opt/Revolt/revolt-desktop --no-sandbox --disable-seccomp-filter-sandbox
+    command: opt/Revolt/revolt-desktop --no-sandbox --disable-seccomp-filter-sandbox
     autostart: revolt-desktop.desktop
     desktop: usr/share/applications/revolt-desktop.desktop
     environment:
