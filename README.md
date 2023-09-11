@@ -1,4 +1,4 @@
-# Revolt Desktop
+# Revolt Desktop [![revolt-desktop](https://snapcraft.io/revolt-desktop/badge.svg)](https://snapcraft.io/revolt-desktop)
 
 A unofficial wrapper of the revolt.chat desktop client
 
