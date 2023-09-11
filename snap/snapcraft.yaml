@@ -7,7 +7,7 @@ description: |
   Revolt is one of the best ways to stay connected with your friends and community without sacrificing any usability. We focus on the user, and you can be sure that your conversations are confidential and your data is secure.
 
 base: core22
-confinement: devmode # use 'strict' once you have the right plugs and slots
+confinement: strict # use 'strict' once you have the right plugs and slots
 
 parts:
   revolt:
