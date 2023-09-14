@@ -3,42 +3,17 @@ name: 💻 Check for new releases
 on:
   workflow_dispatch:
   schedule:
-    - cron: "30 1 * * *"
+    - cron: "0 0 * * *"
 
 jobs:
   check:
     runs-on: ubuntu-latest
     steps:
-      - id: get_release_upstream
-        name: Get latest release in revoltchat/desktop
-        uses: pozetroninc/github-action-get-latest-release@master
+      - name: release-notifier-gh
+        uses: maheshrayas/action-release-notifier@v2.1
         with:
-          repository: revoltchat/desktop
-          excludes: prerelease, draft
-      - id: get_current_release
-        name: Get current release from this repository
-        uses: pozetroninc/github-action-get-latest-release@master
-        with:
-          repository: ${{ github.repository }}
-          excludes: prerelease, draft
-      - id: check_issue
-        name: Check if issue already exists
-        if: ${{steps.get_release_upstream.outputs.release == steps.get_current_release.outputs.release}}
-        uses: actions-cool/issues-helper@v3
-        with:
-          actions: 'check-issue'
-          title-includes: 'Update package to ${{steps.get_release_upstream.outputs.release}}'
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - id: post
-        name: Create issue
-        if: ${{steps.check_issue.outputs.check-result == 'false'}}
-        uses: actions-cool/issues-helper@v3
-        with:
-          actions: 'create-issue'
-          token: ${{ secrets.GITHUB_TOKEN }}
-          title: Update package to ${{steps.get_release_upstream.outputs.release}}
-          body: |
-            Release Notes:
-
-            ${{steps.get_release_upstream.outputs.description}}
+          github_token: '${{ secrets.GITHUB_TOKEN }}'
+          type: Github
+          repo: 'https://github.com/revoltchat/desktop'
+          days: 1
           labels: 'upstream, enhancement'
