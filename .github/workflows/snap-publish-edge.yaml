@@ -3,6 +3,7 @@ on:
   workflow_run:
     workflows: [🧪 Test snap can be built on x86_64]
     types: [completed]
+  workflow_dispatch:
 
 jobs:
   build:
