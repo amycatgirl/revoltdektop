@@ -11,7 +11,8 @@ architectures:
 parts:
   metadata:
     plugin: dump
-    source: gui/chat.revolt.desktop.appdata.xml
+    source-type: local
+    source: chat.revolt.desktop.appdata.xml
     parse-info: [/usr/local/share/appdata/chat.revolt.desktop.appdata.xml]
   revolt:
     plugin: nil

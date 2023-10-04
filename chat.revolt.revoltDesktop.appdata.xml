@@ -13,6 +13,8 @@
         sacrificing any usability. We focus on the user, and you can be sure that your conversations
         are confidential and your data is secure.
 
+        This is a unoficial wrapper of the official revolt-desktop client.
+
     </description>
     <icon type="remote" height="256" width="256">
         https://raw.githubusercontent.com/revoltchat/desktop/master/build/icons/icon.png</icon>
@@ -36,7 +38,7 @@
         chat.revolt.revoltDesktop
     </launchable>
     <releases>
-        <release date="2023-10-04" version="1.0.6+snap" type="stable" urgency="high">
+        <release date="2023-10-04" version="1.0.6+snap.11" type="stable" urgency="high">
             <description>
                 <p>This release adresses vulnerabilities with the libx11 package</p>
             </description>
