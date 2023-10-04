@@ -11,7 +11,6 @@ architectures:
 parts:
   metadata-from-file:
     plugin: dump
-    source-type: local
     source: snap/local
     organize:
       chat.revolt.revoltDesktop.appdata.xml: /usr/local/share/appdata/
@@ -66,8 +65,8 @@ apps:
     extensions: [gnome]
     command: opt/Revolt/revolt-desktop --no-sandbox --disable-seccomp-filter-sandbox
     common-id: chat.revolt.revoltDesktop
-    autostart: revolt-desktop.desktop
-    desktop: usr/share/applications/revolt-desktop.desktop
+    autostart: chat.revolt.revoltDesktop.desktop
+    desktop: usr/share/applications/chat.revolt.revoltDesktop.desktop
     environment:
       # Correct the TMPDIR path for Chromium Framework/Electron to
       # ensure libappindicator has readable resources
