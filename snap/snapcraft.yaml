@@ -9,11 +9,14 @@ architectures:
   - build-on: amd64
 
 parts:
-  metadata:
+  metadata-from-file:
     plugin: dump
     source-type: local
-    source: gui/chat.revolt.desktop.appdata.xml
-    parse-info: [/usr/local/share/appdata/chat.revolt.desktop.appdata.xml]
+    source: snap/local
+    organize:
+      chat.revolt.revoltDesktop.appdata.xml: /usr/local/share/appdata/
+    
+    parse-info: [/usr/local/share/appdata/chat.revolt.revoltDesktop.appdata.xml]
   revolt:
     plugin: nil
     override-build: |
