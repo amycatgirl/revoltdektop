@@ -1,6 +1,12 @@
 name: revolt-desktop # you probably want to 'snapcraft register <name>'
 version: "1.0.6" # just for humans, typically '1.2+git' or '1.3.2'
-adopt-info: metadata-from-file
+summary: Find your community, connect with the world.
+description: |
+  Find your community, connect with the world.
+  Revolt is one of the best ways to stay connected with your friends and community without sacrificing any usability.
+  We focus on the user, and you can be sure that your conversations are confidential and your data is secure.
+
+  Unofficial wrapper made by @amycatgirl#9237
 base: core22
 confinement: strict # use 'strict' once you have the right plugs and slots
 compression: lzo
@@ -9,13 +15,6 @@ architectures:
   - build-on: amd64
 
 parts:
-  metadata-from-file:
-    plugin: dump
-    source: snap/local
-    organize:
-      chat.revolt.revoltDesktop.appdata.xml: /usr/local/share/appdata/
-    parse-info: [/usr/local/share/appdata/chat.revolt.revoltDesktop.appdata.xml]
-  
   revolt:
     plugin: nil
     override-build: |
@@ -64,7 +63,6 @@ apps:
   revolt:
     extensions: [gnome]
     command: opt/Revolt/revolt-desktop --no-sandbox --disable-seccomp-filter-sandbox
-    common-id: chat.revolt.revoltDesktop
     autostart: chat.revolt.revoltDesktop.desktop
     desktop: usr/share/applications/chat.revolt.revoltDesktop.desktop
     environment:
