@@ -1,5 +1,8 @@
 {
     "yaml.schemas": {
-        "/snap/snapcraft/current/share/snapcraft/schema/snapcraft.json": "**/snapcraft.yaml",
+        "/snap/snapcraft/current/share/snapcraft/schema/snapcraft.json": [
+            "**/snapcraft.yaml",
+            "file:///home/amycatgirl/Projects/revoltdektop/snap/snapcraft.yaml"
+        ]
     }
 }
