@@ -15,6 +15,11 @@ architectures:
   - build-on: amd64
 
 parts:
+  custom-wrapper:
+    plugin: dump
+    source: snap/local/
+    organize:
+      launch-wrapper: bin/
   revolt:
     plugin: nil
     override-build: |
@@ -62,7 +67,7 @@ plugs:
 apps:
   revolt:
     extensions: [gnome]
-    command: opt/Revolt/revolt-desktop --no-sandbox --disable-seccomp-filter-sandbox --enable-features=UseOzonePlatform --ozone-platform=wayland
+    command: bin/launch-wrapper
     autostart: chat.revolt.revoltDesktop.desktop
     desktop: usr/share/applications/chat.revolt.revoltDesktop.desktop
     environment:

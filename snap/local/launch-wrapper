@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+opt/Revolt/revolt-desktop --no-sandbox --disable-seccomp-filter-sandbox --enable-features=UseOzonePlatform --ozone-platform=wayland
