@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-"$SNAP/opt/Revolt/revolt-desktop" --no-sandbox --disable-seccomp-filter-sandbox --enable-features=UseOzonePlatform --ozone-platform=wayland
+"$SNAP/opt/Revolt/revolt-desktop" --no-sandbox --disable-seccomp-filter-sandbox

@@ -93,3 +93,5 @@ apps:
       - system-observe
       - unity7
       - wayland
+      - x11
+      - browser-support
