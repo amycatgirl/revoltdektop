@@ -12,7 +12,7 @@ parts:
   metadata:
     plugin: dump
     source-type: local
-    source: chat.revolt.desktop.appdata.xml
+    source: ./chat.revolt.desktop.appdata.xml
     parse-info: [/usr/local/share/appdata/chat.revolt.desktop.appdata.xml]
   revolt:
     plugin: nil
