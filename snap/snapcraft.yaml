@@ -62,7 +62,7 @@ plugs:
 apps:
   revolt:
     extensions: [gnome]
-    command: opt/Revolt/revolt-desktop --no-sandbox --disable-seccomp-filter-sandbox
+    command: opt/Revolt/revolt-desktop --no-sandbox --disable-seccomp-filter-sandbox --enable-features=UseOzonePlatform --ozone-platform=wayland
     autostart: chat.revolt.revoltDesktop.desktop
     desktop: usr/share/applications/chat.revolt.revoltDesktop.desktop
     environment:
@@ -70,7 +70,7 @@ apps:
       # ensure libappindicator has readable resources
       TMPDIR: $XDG_RUNTIME_DIR
       # Fallback to XWayland if running in a Wayland session.
-      DISABLE_WAYLAND: 1
+      DISABLE_WAYLAND: 0
       GTK_USE_PORTAL: 1
     plugs:
       - audio-playback
@@ -87,3 +87,4 @@ apps:
       - shmem
       - system-observe
       - unity7
+      - wayland
