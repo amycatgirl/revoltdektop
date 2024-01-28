@@ -30,6 +30,8 @@ parts:
       corepack enable
       git clone https://github.com/revoltchat/desktop.git
       cd desktop
+      cat package.json | jq '.version = "1.0.6+snap"' | tee package.json
+      cat package.json | jq '.devDependencies.electron = "^28.2.0"' | tee package.json
       corepack yarn
       corepack yarn build:bundle
       corepack yarn build:linux deb
