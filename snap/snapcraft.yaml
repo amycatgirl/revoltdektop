@@ -24,7 +24,6 @@ parts:
     plugin: nil
     override-build: |
       craftctl default
-      sudo apt install jq -y
       # Install corepack
       npm i -g corepack
       # Enable Corepack to install yarn
@@ -51,6 +50,7 @@ parts:
       - libnss3
       - libxss1
       - xdg-utils
+      - jq
     prime:
       - -usr/bin/xdg-open
   cleanup:
