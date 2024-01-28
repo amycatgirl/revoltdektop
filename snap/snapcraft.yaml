@@ -39,11 +39,12 @@ parts:
       rm $CRAFT_PART_INSTALL/opt/Revolt/chrome-sandbox
       sed -i 's|Icon=revolt-desktop|Icon=/usr/share/icons/hicolor/512x512/apps/revolt-desktop\.png|' ${CRAFT_PART_INSTALL}/usr/share/applications/revolt-desktop.desktop
       mv ${CRAFT_PART_INSTALL}/usr/share/applications/revolt-desktop.desktop ${CRAFT_PART_INSTALL}/usr/share/applications/chat.revolt.revoltDesktop.desktop
-    build-snaps: [node/18/stable]
+    build-snaps:
+      - node/18/stable
+      - jq
     build-packages:
       - git
       - sed
-      - jq
     stage-packages:
       - libatomic1
       - libc++1
