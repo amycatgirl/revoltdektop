@@ -43,6 +43,7 @@ parts:
     build-packages:
       - git
       - sed
+      - jq
     stage-packages:
       - libatomic1
       - libc++1
@@ -50,8 +51,6 @@ parts:
       - libnss3
       - libxss1
       - xdg-utils
-      - jq
-      - libjq1
     prime:
       - -usr/bin/xdg-open
   cleanup:
